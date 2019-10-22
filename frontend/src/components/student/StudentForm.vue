@@ -6,7 +6,9 @@
         <v-text-field @keyup.enter="save" label="Курс" placeholder="Введите курс" v-model="course"></v-text-field>
         <v-text-field @keyup.enter="save" label="Факультет" placeholder="Введите факультет" v-model="faculty"></v-text-field>
         <v-text-field @keyup.enter="save" label="Группа" placeholder="Введите группу" v-model="team"></v-text-field>
-        <v-btn rounded text @click="save" v-on:keypress.enter="save">Save</v-btn>
+        <v-btn rounded text @click="save" v-on:keypress.enter="save">
+            <v-icon x-large>mdi-content-save-outline</v-icon>
+        </v-btn>
     </v-layout>
 </template>
 

@@ -31,8 +31,12 @@
         </v-card-text>
         <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn small text rounded @click="edit">Edit</v-btn>
-            <v-btn small text rounded @click="del">X</v-btn>
+            <v-btn large text icon color="blue" @click="edit">
+                <v-icon large>mdi-pencil-circle</v-icon>
+            </v-btn>
+            <v-btn large text icon color="red" @click="del">
+                <v-icon large>mdi-delete-circle</v-icon>
+            </v-btn>
         </v-card-actions>
     </v-card>
 </template>

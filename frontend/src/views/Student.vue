@@ -38,7 +38,4 @@ export default {
 </script>
 
 <style scoped>
-    .student-form {
-        width: 500px;
-    }
 </style>
