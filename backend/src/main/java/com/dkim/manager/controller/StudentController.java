@@ -1,7 +1,7 @@
 package com.dkim.manager.controller;
 
 import com.dkim.manager.model.Student;
-import com.dkim.manager.repository.StudentRepo;
+import com.dkim.manager.service.StudentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,21 +12,21 @@ import java.util.List;
 @RequestMapping("api/user/student")
 public class StudentController {
 
-    private final StudentRepo studentRepo;
+    private final StudentService studentService;
 
     @Autowired
-    public StudentController(StudentRepo studentRepo) {
-        this.studentRepo = studentRepo;
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @PostMapping
     public Student addStudent(@RequestBody Student student) {
-        return studentRepo.save(student);
+        return studentService.addStudent(student);
     }
 
     @GetMapping
     public List<Student> getAllStudents() {
-        return studentRepo.findAll();
+        return studentService.getAllStudents();
     }
 
     @PutMapping("{id}")
@@ -35,11 +35,11 @@ public class StudentController {
             @RequestBody Student studentFromUser
     ) {
         BeanUtils.copyProperties(studentFromUser, studentFromDb, "id");
-        return studentRepo.save(studentFromDb);
+        return studentService.addStudent(studentFromDb);
     }
 
     @DeleteMapping("{id}")
     public void deleteStudent(@PathVariable("id") Student student) {
-        studentRepo.delete(student);
+        studentService.deleteStudent(student);
     }
 }
