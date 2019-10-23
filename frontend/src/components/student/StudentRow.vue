@@ -23,7 +23,7 @@
                     </tr>
                     <tr>
                         <td>Группа</td>
-                        <td>{{ student.team }}</td>
+                        <td>{{ student.studyGroup }}</td>
                     </tr>
                     </tbody>
                 </template>

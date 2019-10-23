@@ -5,7 +5,7 @@
         <v-text-field @keyup.enter="save" label="Отчество" placeholder="Введите отчество" v-model="middleName"></v-text-field>
         <v-text-field @keyup.enter="save" label="Курс" placeholder="Введите курс" v-model="course"></v-text-field>
         <v-text-field @keyup.enter="save" label="Факультет" placeholder="Введите факультет" v-model="faculty"></v-text-field>
-        <v-text-field @keyup.enter="save" label="Группа" placeholder="Введите группу" v-model="team"></v-text-field>
+        <v-text-field @keyup.enter="save" label="Группа" placeholder="Введите группу" v-model="studyGroup"></v-text-field>
         <v-btn rounded text @click="save" v-on:keypress.enter="save">
             <v-icon x-large>mdi-content-save-outline</v-icon>
         </v-btn>
@@ -24,7 +24,7 @@ export default {
       middleName: '',
       course: '',
       faculty: '',
-      team: ''
+      studyGroup: ''
     }
   },
   watch: {
@@ -35,7 +35,7 @@ export default {
       this.middleName = currStudent.middleName
       this.course = currStudent.course
       this.faculty = currStudent.faculty
-      this.team = currStudent.team
+      this.studyGroup = currStudent.studyGroup
     }
   },
   methods: {
@@ -47,7 +47,7 @@ export default {
           middleName: this.middleName,
           course: this.course,
           faculty: this.faculty,
-          team: this.team
+          studyGroup: this.studyGroup
         }
 
       if (this.id) {
@@ -71,7 +71,7 @@ export default {
       this.middleName = ''
       this.course = ''
       this.faculty = ''
-      this.team = ''
+      this.studyGroup = ''
     }
   }
 }

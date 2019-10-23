@@ -23,7 +23,7 @@
                             </v-col>
                             <v-col cols="12" sm="2" md="10">
                                 <v-text-field
-                                    label="Название"
+                                    label="*Название"
                                     hint="полное наименование л/р"
                                     v-model="name"
                                 ></v-text-field>

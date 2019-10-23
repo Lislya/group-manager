@@ -7,7 +7,7 @@
             height="200px"
         >
             <v-card-title>{{ card.name }}</v-card-title>
-            <v-card-subtitle>Лаборатораная работа №{{ card.number }}</v-card-subtitle>
+            <v-card-subtitle light>Лаборатораная работа №{{ card.number }}</v-card-subtitle>
         </v-img>
 
         <v-divider></v-divider>
@@ -17,7 +17,7 @@
                 <v-icon large>mdi-plus-circle</v-icon>
             </v-btn>
 
-            <v-btn icon color="blue">
+            <v-btn icon color="blue" @click="editLabwork">
                 <v-icon large>mdi-pencil-circle</v-icon>
             </v-btn>
 

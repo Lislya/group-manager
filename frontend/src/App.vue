@@ -14,16 +14,16 @@
                     <v-list-item>
                         <v-list-item-content>
                             <v-list-item-title>
-                                <v-icon>mdi-account-multiple</v-icon>
-                                <v-btn text small to="/team">Моя бригада</v-btn>
+                                <v-icon>mdi-format-list-checkbox</v-icon>
+                                <v-btn small text to="/student">Список студентов</v-btn>
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                     <v-list-item>
                         <v-list-item-content>
                             <v-list-item-title>
-                                <v-icon>mdi-format-list-checkbox</v-icon>
-                                <v-btn small text to="/student">Сипсок студентов</v-btn>
+                                <v-icon>mdi-clipboard-list-outline</v-icon>
+                                <v-btn small text to="/team">Список бригад</v-btn>
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
@@ -38,7 +38,7 @@
                 </v-list>
             </v-navigation-drawer>
 
-            <v-app-bar app color="base" dark>
+            <v-app-bar app color="base" dark height="40">
                 <v-spacer></v-spacer>
                 <v-toolbar-title>Лабораторный практикум</v-toolbar-title>
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>

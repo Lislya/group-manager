@@ -6,7 +6,10 @@
                 :key="card.id"
                 :cols="4"
             >
-                <labwork-card :card="card" @removeLabwork="removeLabworkFromTable"></labwork-card>
+                <labwork-card
+                    :card="card"
+                    @removeLabwork="removeLabworkFromTable"
+                ></labwork-card>
             </v-col>
         </v-row>
     </v-container>

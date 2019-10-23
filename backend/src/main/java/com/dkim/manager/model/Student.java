@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @EqualsAndHashCode(callSuper = true)
@@ -12,6 +14,10 @@ import javax.persistence.Table;
 @Data
 public class Student extends User {
     private String faculty;
-    private String team;
+    private String studyGroup;
     private Integer course;
+
+    @ManyToOne
+    @JoinColumn
+    private Team team;
 }
